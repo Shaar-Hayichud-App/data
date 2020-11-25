@@ -43,8 +43,8 @@ String currentTopUrlPart;
 ///     * Clear the saved current 2nd and 3rd level sections
 ///   * If its a ###: Add it to the last created 2nd level section
 ///     * Clear the saved current 3rd level section.
+///   * If its a >: Set the top level media base URL
 ///   * If there's no starting marker on the line
-///     * If we're in a second level section and URL hasn't been set, set URL.
 ///     * If there's a current media being built, set it's URL, then clear the saved current.
 ///     * If there isn't a current media being built, create one and set URL. The title is `'Part ${index + 1}'`
 ///   * If its a dash (-): Create a new media, set the title.
