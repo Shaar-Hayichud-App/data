@@ -86,6 +86,12 @@ void useLineToFormSite(String line) {
     case '###':
       currentMedia = null;
 
+      // A ### by itself marks the end of the current media section.
+      if (!line.contains(' ')) {
+        currentMediaSection = null;
+        break;
+      }
+
       currentMediaSection = MediaSection(
           parentId: currentSection.id, title: extractTitle(line), media: []);
       currentSection.content
