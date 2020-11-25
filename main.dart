@@ -51,6 +51,7 @@ String currentTopUrlPart;
 void main() {
   final dataFile = File('data.txt').readAsLinesSync();
   dataFile.forEach(useLineToFormSite);
+  site.setAudioCount();
   print(jsonEncode(site));
 }
 
