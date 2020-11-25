@@ -1,6 +1,6 @@
 # Rabbi Markel Advanced Series
 ## Part 1: Chapters 10-15
-Markel Advanced Compact Seminar/Advanced  part 1 ch 10-15 compact
+> Markel Advanced Compact Seminar/Advanced  part 1 ch 10-15 compact
 - Introduction
 001 Intro.mp3
 ### Chapter 10
@@ -25,7 +25,7 @@ Markel Advanced Compact Seminar/Advanced  part 1 ch 10-15 compact
 - End Chapter 15 and Chapter 16
 014 Tape022-Side1-Ch15&16.mp3
 ## Part 2: Chapters 1-4
-Markel Advanced Compact Seminar/Advanced  part 2 ch 1 - 4 compact
+> Markel Advanced Compact Seminar/Advanced  part 2 ch 1 - 4 compact
 ### Chapter 1
 015 Tape001-Side1-Ch1.mp3
 016 Tape001-Side2-Ch1.mp3
@@ -40,7 +40,7 @@ Markel Advanced Compact Seminar/Advanced  part 2 ch 1 - 4 compact
 022 Tape004-Side2-Ch4.mp3
 023 Tape005-Side1-Ch4.mp3
 ## Part 3: Chapters 16-19
-Markel Advanced Compact Seminar/Advanced  part 3 ch 16 -19 compact
+> Markel Advanced Compact Seminar/Advanced  part 3 ch 16 -19 compact
 ### Chapter 16
 024 Tape022-Side2-Ch16.mp3
 025 Tape023-Side1-Ch16.mp3
@@ -52,7 +52,7 @@ Markel Advanced Compact Seminar/Advanced  part 3 ch 16 -19 compact
 - Chapter 19
 029 Tape025-Side1-Ch19.mp3
 ## Part 4: Chapters 20-30
-Markel Advanced Compact Seminar/Advanced  part 4 ch 20-30 compact
+> Markel Advanced Compact Seminar/Advanced  part 4 ch 20-30 compact
 ### Chapter 20
 030 Tape025-Side2-Ch20.mp3
 031 Tape026-Side1-Ch20.mp3
@@ -80,7 +80,7 @@ Markel Advanced Compact Seminar/Advanced  part 4 ch 20-30 compact
 - End Chapter 29 and 30
 044 Tape032-Side2-Ch29&30.mp3
 ## Part 5 Chapters 30-33
-Markel Advanced Compact Seminar/Advanced  part 5 ch 30-33 compact
+> Markel Advanced Compact Seminar/Advanced  part 5 ch 30-33 compact
 - Chapter 30
 045 Tape33-Side1-Ch30.mp3
 - Chapter 31
@@ -95,7 +95,7 @@ Markel Advanced Compact Seminar/Advanced  part 5 ch 30-33 compact
 - Chapter 33
 052 Tape36-Side2 CH33-.mp3
 ## Part 6 Chapters 7-9
-Markel Advanced Compact Seminar/Advanced  part 6 ch 7 8 9 compact
+> Markel Advanced Compact Seminar/Advanced  part 6 ch 7 8 9 compact
 ### Chapter 7
 053 Tape011-Side2-Ch7.mp3
 054 Tape012-Side1-Ch7.mp3
@@ -107,7 +107,7 @@ Markel Advanced Compact Seminar/Advanced  part 6 ch 7 8 9 compact
 058 Tape014-Side2-Ch9.mp3
 059 Tape015-Side1-Ch9.mp3
 ## Part 7 Chapters 5 and 6
-Markel Advanced Compact Seminar/Advanced  part 7 ch 5 6 compact
+> Markel Advanced Compact Seminar/Advanced  part 7 ch 5 6 compact
 ### Chapter 5
 060 Ch5 part1.mp3
 061 Ch5 part2.mp3
@@ -124,7 +124,7 @@ Markel Advanced Compact Seminar/Advanced  part 7 ch 5 6 compact
 071 Tape010-Side2-Ch6.mp3
 072 Tape011-Side1-Ch6.mp3
 ## Part 8 Chapters 34 to End
-Markel Advanced Compact Seminar/Edited advanced pt 2  34- end
+> Markel Advanced Compact Seminar/Edited advanced pt 2  34- end
 - Chapter 34
 201 Tape37-Side1 CH34.mp3
 - End Chapter 34 and Chapter 35

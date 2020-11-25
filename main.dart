@@ -77,46 +77,72 @@ void useLineToFormSite(String line) {
           parentId: currentTopSection.id,
           title: extractTitle(line));
 
+      site.sections[currentSection.id] = currentSection;
+
       currentTopSection.content
           .add(SectionContent(sectionId: currentSection.id));
       break;
     case '###':
       currentMedia = null;
 
-      currentMediaSection =
-          MediaSection(parentId: currentSection.id, title: extractTitle(line));
+      currentMediaSection = MediaSection(
+          parentId: currentSection.id, title: extractTitle(line), media: []);
+      currentSection.content
+          .add(SectionContent(mediaSection: currentMediaSection));
       break;
     case '-':
       currentMedia = Media(
           title: extractTitle(line),
           id: idGenerator.next(),
-          parentId: currentMediaSection.id);
+          parentId: getCurrentMediaParentId());
+      break;
+    case '>':
+      currentTopUrlPart = extractTitle(line);
       break;
     default:
-      if (currentSection.content.isEmpty) {
-        // The first line afer a 2nd level section is the base URL of content in
-        // that section.
-        currentTopUrlPart = line;
-      } else {
-        // Either we have a finished media, which was already added, and we can make a new one
-        // Or we're in the middle of making one, and all we have so far is the title.
-        // If the source isn't set, we know that we're in the middle of making one.
-        if (currentMedia.source == null) {
-          currentMedia = currentMedia.copyWith(source: line);
-        } else {
-          currentMedia = Media(
-              parentId: currentMediaSection.id,
-              title: 'Part ${currentMediaSection.media.length + 1}');
-        }
+      // Either we have a finished media, which was already added, and we can make a new one
+      // Or we're in the middle of making one, and all we have so far is the title.
+      // If the source isn't set, we know that we're in the middle of making one.
+      currentMedia = currentMedia?.copyWith(source: getUrl(line)) ??
+          Media(
+              parentId: getCurrentMediaParentId(),
+              title: 'Part ${getCurrentMediaParentLength() + 1}',
+              source: getUrl(line));
 
-        currentMediaSection.media.add(currentMedia);
-        currentMedia = null;
-      }
+      addMediaToCurrent(currentMedia);
+      currentMedia = null;
   }
 }
 
 String extractTitle(String line) => line.substring(line.indexOf(' ') + 1);
-String getUrl(String endUrlPart) => '$urlBase/$currentTopUrlPart/$endUrlPart';
+
+String getUrl(String endUrlPart) =>
+    Uri.parse('$urlBase/$currentTopUrlPart/$endUrlPart').toString();
+
+SiteDataItem getCurrentMediaParent() =>
+    currentMediaSection ?? currentSection ?? currentTopSection;
+
+int getCurrentMediaParentId() => getCurrentMediaParent().id;
+
+void addMediaToCurrent(Media media) {
+  final currentParent = getCurrentMediaParent();
+  if (currentParent is MediaSection) {
+    currentParent.media.add(media);
+  } else if (currentParent is Section) {
+    currentParent.content.add(SectionContent(media: media));
+  }
+}
+
+int getCurrentMediaParentLength() {
+  final currentParent = getCurrentMediaParent();
+  if (currentParent is MediaSection) {
+    return currentParent.media?.length ?? 0;
+  } else if (currentParent is Section) {
+    return currentParent.content?.length ?? 0;
+  }
+
+  throw ArgumentError('Not valid parent');
+}
 
 class IDGenerator {
   int _currentId = 0;

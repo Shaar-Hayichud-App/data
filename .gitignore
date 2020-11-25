@@ -23,3 +23,6 @@ doc/api/
 *.js.map
 
 # End of https://www.toptal.com/developers/gitignore/api/dart
+
+# Generated JSON file
+*.json
