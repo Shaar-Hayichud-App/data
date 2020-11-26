@@ -7,7 +7,7 @@ import 'package:inside_api/site.dart';
 final idGenerator = IDGenerator();
 const urlBase = 'http://d35zpkccrlbazl.cloudfront.net';
 
-final site = Site();
+final site = Site(createdDate: DateTime.now());
 Section currentTopSection;
 Section currentSection;
 MediaSection currentMediaSection;
