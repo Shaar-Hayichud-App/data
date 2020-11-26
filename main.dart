@@ -24,9 +24,14 @@ String currentTopUrlPart;
 /// a ## Starts a second level section.
 ///
 /// a ### Starts a third level section.
+/// 
+/// A third level section is ended either by the next section or by 3 ###s alone on a line.
+/// 
+/// An empty line is ignored.
+/// 
+/// // Marks a comment. Must be the whole line.
 ///
 /// The section title follows the section marker and a space.
-/// The line after a second level ## section is the base URL for all content of that section.
 ///
 /// Lines in a 2nd or 3rd level section are URL for particular classes.
 /// A dash (-) marks the title for the class on the line which follows.
@@ -57,6 +62,9 @@ void main() {
 
 void useLineToFormSite(String line) {
   switch (line.split(' ')[0]) {
+    case '':
+    case '//':
+      break;
     case '#':
       currentSection = null;
       currentMediaSection = null;
