@@ -23,9 +23,10 @@ String currentTopUrlPart;
 ///
 /// a ## Starts a second level section.
 ///
-/// a ### Starts a third level section.
+/// a ### Starts a media section.
 /// 
-/// A third level section is ended either by the next section or by 3 ###s alone on a line.
+/// A media section is ended either by the next section or by 3 ###s alone on a line.
+/// A 2nd level section is ended either by the next 2nd level section or 2 ##s alone on a line.
 /// 
 /// An empty line is ignored.
 /// 
@@ -81,6 +82,12 @@ void useLineToFormSite(String line) {
       currentMediaSection = null;
       currentMedia = null;
 
+      // A ## by itself marks the end of the current 2nd level section.
+      if (!line.contains(' ')) {
+        currentSection = null;
+        break;
+      }
+
       currentSection = Section(
           id: idGenerator.next(),
           parentId: currentTopSection.id,
@@ -100,9 +107,11 @@ void useLineToFormSite(String line) {
         break;
       }
 
+      final sectionToAdd = currentSection ?? currentTopSection;
+
       currentMediaSection = MediaSection(
-          parentId: currentSection.id, title: extractTitle(line), media: []);
-      currentSection.content
+          parentId: sectionToAdd.id, title: extractTitle(line), media: []);
+      sectionToAdd.content
           .add(SectionContent(mediaSection: currentMediaSection));
       break;
     case '-':
